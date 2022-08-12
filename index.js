@@ -1,12 +1,12 @@
 const { Client, Collection, MessageEmbed, Presence } = require("discord.js");
 const client = new Client();
-const token = "MTAwNjkwOTA3MTMxNzgwMzA1MA.GR5zAj.uPqL_nQP8-QUQ_4-NudaYGPGm5VOzOYqnanmgY"
-const prefix = "!"
+const token = "token"
+const prefix = "?"
 
 client.on("ready", () => {
     console.log("NodeStatsBot is online | Change the node name etc from /commands/stats.js")
     console.log("To edit the prefix, status & this message go to index.js")
-    client.user.setActivity('porn', { type: 'WATCHING' })
+    client.user.setActivity('bored', { type: 'WATCHING' })
 })
 
 const fs = require('fs');
