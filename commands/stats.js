@@ -8,7 +8,7 @@ const os = osu.os
 
 module.exports.config = {
     name: "all",
-    aliases: ["node"] //// Change this to change your node's name ////
+    aliases: ["arm"] //// Change this to change your node's name ////
 }
 
 module.exports.run = async (client, message, args) => {
@@ -18,9 +18,9 @@ module.exports.run = async (client, message, args) => {
          let time = os.uptime();
            let hours = secondsToHms(time);
                 let embed = new Discord.MessageEmbed()
-                  .setAuthor("denises server")  //// Change this to change the title ////
+                  .setAuthor("denises raspberry pi 4b | 2")  //// Change this to change the title ////
                   .setFooter("privacy")
-                  .setColor("C42DCF")  //// Change this to the colour you want | hex colour btw ////
+                  .setColor("FF7F00")  //// Change this to the colour you want | hex colour btw ////
                   .setDescription("----- **Node Info** ----```" + `Ram Usage: ${Math.round(Ram.usedMemMb / 1000)} GB / ${Math.round(Ram.totalMemMb / 1000)}GB\nCPU Usage: ${Cpu}%\nUptime: ${hours}`+"```----- **Physical Info** -----```" + `CPU: ${cpu.count()} Threads | ${cpu.model()}` + "```") 
                 message.channel.send(embed);
          }) 
