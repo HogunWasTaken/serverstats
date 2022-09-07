@@ -9,6 +9,12 @@ client.on("ready", () => {
     client.user.setActivity('bored', { type: 'WATCHING' })
 })
 
+client.on('message', message => {
+    if (message.content === '?ping') {  
+      message.channel.send(`**PC** latency is ${Date.now() - message.createdTimestamp}ms. api latency is ${Math.round(client.ws.ping)}ms`);
+    }
+});
+
 const fs = require('fs');
 client.commands = new Collection()
 client.aliases = new Collection();
